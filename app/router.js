@@ -7,7 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('todos');
+  this.route('todos', function() {
+    this.route('new');
+    this.route('edit');
+  });
 });
 
 export default Router;
