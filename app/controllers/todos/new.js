@@ -15,10 +15,10 @@ export default Ember.Controller.extend({
 			});
 
 			// Save to FireBase
-			newTodo.save()
-				.catch(function (e) {
-					console.log(e.errors);
-				});
+			newTodo.save();
+				// .catch(function (e) {
+				// 	console.log(e.errors);
+				// });
 
 			// Clear form
 			this.setProperties({
