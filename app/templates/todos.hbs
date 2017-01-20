@@ -9,5 +9,11 @@
 		{{outlet}}
 	</div>
 	<div class="col-md-8">
+		{{#each model as |todo|}}
+			<div class="well">
+				<h4>{{todo.title}} <span class="label label-primary pull-right">{{todo.date}}</span></h4>
+				{{todo.body}}
+			</div>
+		{{/each}}
 	</div>
 </div>
