@@ -5,6 +5,11 @@ module.exports = function(environment) {
     modulePrefix: 'todolist-ember',
     environment: environment,
     contentSecurityPolicy: {'connect-src': "'self' wss://*.firebaseio.com"},
+    firebase: {
+      authDomain: 'todolist-ember.firebaseapp.com',
+      databaseURL: 'https://todolist-ember.firebaseio.com',
+      storageBucket: 'todolist-ember.appspot.com/'
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
