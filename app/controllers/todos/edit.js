@@ -19,6 +19,15 @@ export default Ember.Controller.extend({
 				// Redirect
 				self.transitionToRoute('todos');
 			});
+		},
+		deleteTodo: function (id) {
+			var self = this;
+
+			this.store.findRecord('todo', id).then(function (todo) {
+				todo.deleteRecord();
+				todo.save();
+				self.transitionToRoute('todos');
+			})
 		}
 	}
 });

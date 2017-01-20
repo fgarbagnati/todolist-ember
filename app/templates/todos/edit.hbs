@@ -13,4 +13,5 @@
 	</div>
 	<button {{action 'editTodo' model.id}} class="btn btn-primary">Submit</button>
 	{{#link-to 'todos' class="btn btn-default"}}Close{{/link-to}}
+	<button {{action 'deleteTodo' model.id}} class="btn btn-danger pull-right">Delete</button>
 </form>
