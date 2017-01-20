@@ -20,11 +20,20 @@
 			</div>
 		</div>
 		<hr><br>
-		{{#each filteredTodos as |todo|}}
-			<div class="well">
-				<h4>{{todo.title}} <span class="label label-primary pull-right">{{format-date todo.date}}</span></h4>
-				{{todo.body}}
-			</div>
-		{{/each}}
+		{{#if filter}}
+			{{#each filteredTodos as |todo|}}
+				<div class="well">
+					<h4>{{todo.title}} <span class="label label-primary pull-right">{{format-date todo.date}}</span></h4>
+					{{todo.body}}
+				</div>
+			{{/each}}
+		{{else}}
+			{{#each sortedTodos as |todo|}}
+				<div class="well">
+					<h4>{{todo.title}} <span class="label label-primary pull-right">{{format-date todo.date}}</span></h4>
+					{{todo.body}}
+				</div>
+			{{/each}}
+		{{/if}}
 	</div>
 </div>
